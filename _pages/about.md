@@ -25,15 +25,15 @@ I am Sungchul Lee, a Ph.D. student in the Department of Computer Science at Yons
 
 ## Publications
 
-1. **[GCStack+GCScaler: Fast and Accurate GPU Performance Analyses Using Fine-Grained Stall Cycle Accounting and Interval Analysis](https://doi.org/10.1145/3695053.3731068)**  
+* **[GCStack+GCScaler: Fast and Accurate GPU Performance Analyses Using Fine-Grained Stall Cycle Accounting and Interval Analysis](https://doi.org/10.1145/3695053.3731068)**  
 Hanna Cha, **Sungchul Lee**, Jounghoo Lee, Yeonan Ha, Joonsung Kim, and Youngsok Kim.  
 *52nd IEEE/ACM International Symposium on Computer Architecture (**ISCA**)*, Jun. 2025.
 
-2. **[GCStack: A GPU Cycle Accounting Mechanism for Providing Accurate Insight Into GPU Performance](https://doi.org/10.1109/LCA.2024.3476909)**  
+* **[GCStack: A GPU Cycle Accounting Mechanism for Providing Accurate Insight Into GPU Performance](https://doi.org/10.1109/LCA.2024.3476909)**  
 Hanna Cha, **Sungchul Lee**, Yeonan Ha, Hanhwi Jang, Joonsung Kim, and Youngsok Kim.  
 *IEEE Computer Architecture Letters (**CAL**)*, Oct. 2024.
 
-3. **[MPC-Wrapper: Fully Harnessing the Potential of Samsung Aquabolt-XL HBM2-PIM on FPGAs](https://ieeexplore.ieee.org/document/10653651)**  
+* **[MPC-Wrapper: Fully Harnessing the Potential of Samsung Aquabolt-XL HBM2-PIM on FPGAs](https://ieeexplore.ieee.org/document/10653651)**  
 Jinwoo Choi<sup>1</sup>, Yeonan Ha<sup>1</sup>, Hanna Cha, Seil Lee, **Sungchul Lee**, Jounghoo Lee, Shin-haeng Kang, Bongjun Kim, Hanwoong Jung, Hanjun Kim, and Youngsok Kim.  
 *32nd IEEE International Symposium on Field-Programmable Custom Computing Machines (**FCCM**)*, May 2024.
 
@@ -46,6 +46,13 @@ Jinwoo Choi<sup>1</sup>, Yeonan Ha<sup>1</sup>, Hanna Cha, Seil Lee, **Sungchul 
 * **Yonsei University, Seoul, South Korea**
   * B.S. in Electrical and Electronic Engineering
   * Mar. 2018 ~ Feb. 2024
+
+
+## Projects
+* DPU-Centric Datacenter Architecture for Next-Generation AI Devices
+  * *Institute of Information & communications Technology Planning & evaluation (IITP)*
+* Designing a PIM-Based NPU Architecture and FPGA Prototyping
+  * *Samsung Advanced Institute of Technology (SAIT)*
 
 
 ## Experiences
