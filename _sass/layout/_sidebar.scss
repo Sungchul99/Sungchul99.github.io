@@ -307,6 +307,19 @@
     white-space: nowrap;
   }
 
+  /* Only on small screens, allow email to wrap */
+  @media screen and (max-width: 1280px) {
+    li.author__contact {
+      white-space: normal; /* override nowrap for email row */
+    }
+
+    li.author__contact .author__contact-value {
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+  }
+
   a {
     display: block;
     margin-bottom: 5px;
