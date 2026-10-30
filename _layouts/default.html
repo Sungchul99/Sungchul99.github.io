@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
+  <div class="page">
   {% assign cv_pdf = site.static_files | where: "path", "/files/cv.pdf" | first %}
   <!-- Mobile menu toggle (CSS only): the label in the sidebar checks this box. -->
   <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
@@ -61,5 +62,6 @@
     </article>
     <footer>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</footer>
   </main>
+  </div>
 </body>
 </html>
