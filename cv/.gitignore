@@ -1,0 +1,9 @@
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+# The published copy is ../files/cv.pdf
+cv.pdf

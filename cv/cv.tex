@@ -1,0 +1,114 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}  % Latin Modern = Computer Modern with T1 encoding (copyable "_" etc.)
+\usepackage[left=1.5cm,right=1.5cm,top=1.3cm,bottom=1.5cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1  % keep the PDF text searchable / copyable
+
+% Links are black (still clickable); only the contact links in the header are blue.
+\definecolor{accent}{HTML}{0073A0}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,
+  linkcolor=black,
+  pdftitle={Sungchul Lee - Curriculum Vitae},
+  pdfauthor={Sungchul Lee},
+}
+\newcommand{\bluelink}[2]{{\hypersetup{urlcolor=accent}\href{#1}{#2}}}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\raggedright
+
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+% Entry lists: \begin{entries}[item spacing] \entry{..}{..}{..}{..} ... \end{entries}
+\newenvironment{entries}[1][4pt]{\begin{itemize}[leftmargin=0pt, label={}, itemsep=#1, topsep=0pt]}{\end{itemize}}
+
+% \entry{left, bold}{right}{second line left, italic}{second line right, italic}
+\newcommand{\entry}[4]{%
+  \item
+  \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}}
+
+% \oneline{left}{right}: single-line entry
+\newcommand{\oneline}[2]{\item #1 \hfill #2}
+
+% Bullets under an entry
+\newenvironment{details}{\small\begin{itemize}[leftmargin=1.2em, label=\textbullet, itemsep=0pt, topsep=1pt]}{\end{itemize}}
+
+% Publications, newest first, labelled by hand: \item[{[4]}] ...
+\newenvironment{publist}
+  {\begin{enumerate}[leftmargin=2.2em, labelsep=.6em, align=left, itemsep=5pt, topsep=0pt]}
+  {\end{enumerate}}
+
+\newcommand{\me}{\textbf{Sungchul Lee}}
+\newcommand{\venue}[1]{\textbf{#1}}
+
+\begin{document}
+
+\begin{center}
+  {\Huge\scshape Sungchul Lee}\\[4pt]
+  Ph.D. Student, HPCP Lab, Department of Computer Science, Yonsei University, Seoul, South Korea\\[2pt]
+  \small
+  \bluelink{mailto:sungchul_lee@yonsei.ac.kr}{sungchul\_lee@yonsei.ac.kr}
+  \enspace$|$\enspace \bluelink{https://sungchul99.github.io}{Personal Website}
+\end{center}
+
+\section{Education}
+\begin{entries}
+  \entry{Yonsei University}{Mar. 2024 -- Present}
+        {Ph.D. Student in Computer Science and Engineering}{Seoul, South Korea}
+  \begin{details}
+    \item Advisor: \href{https://youngsok.github.io/}{Prof. Youngsok Kim}, \href{https://yonsei-hpcp.github.io/}{HPCP Lab}
+  \end{details}
+
+  \entry{Yonsei University}{Mar. 2018 -- Feb. 2024}
+        {B.S. in Electrical and Electronic Engineering (GPA: 3.98/4.5)}{Seoul, South Korea}
+\end{entries}
+
+\section{Publications}
+\begin{publist}
+  \item[{[4]}] \textbf{GJP: Fast and Efficient Join-Project Query Processing on GPUs Using Density-Aware Matrix Multiplication}\\
+    {\small \me, Suhyun Lee, Hanna Cha, Chaemin Lim, and Youngsok Kim\\
+    \textit{2027 ACM International Conference on Management of Data (\venue{SIGMOD})}, June 2027 (to appear)}
+
+  \item[{[3]}] \textbf{\href{https://doi.org/10.1145/3695053.3731068}{GCStack+GCScaler: Fast and Accurate GPU Performance Analyses Using Fine-Grained Stall Cycle Accounting and Interval Analysis}}\\
+    {\small Hanna Cha, \me, Jounghoo Lee, Yeonan Ha, Joonsung Kim, and Youngsok Kim\\
+    \textit{52nd IEEE/ACM International Symposium on Computer Architecture (\venue{ISCA})}, June 2025}
+
+  \item[{[2]}] \textbf{\href{https://doi.org/10.1109/LCA.2024.3476909}{GCStack: A GPU Cycle Accounting Mechanism for Providing Accurate Insight Into GPU Performance}}\\
+    {\small Hanna Cha, \me, Yeonan Ha, Hanhwi Jang, Joonsung Kim, and Youngsok Kim\\
+    \textit{IEEE Computer Architecture Letters (\venue{CAL})}, Oct. 2024}
+
+  \item[{[1]}] \textbf{\href{https://ieeexplore.ieee.org/document/10653651}{MPC-Wrapper: Fully Harnessing the Potential of Samsung Aquabolt-XL HBM2-PIM on FPGAs}}\\
+    {\small Jinwoo Choi\textsuperscript{1}, Yeonan Ha\textsuperscript{1}, Hanna Cha, Seil Lee, \me, Jounghoo Lee, Shin-haeng Kang, Bongjun Kim, Hanwoong Jung, Hanjun Kim, and Youngsok Kim\\
+    \textit{32nd IEEE International Symposium on Field-Programmable Custom Computing Machines (\venue{FCCM})}, May 2024}
+\end{publist}
+\smallskip
+{\footnotesize \textsuperscript{1}Equal contribution}
+
+\section{Research Projects}
+\begin{entries}
+  \entry{DPU-Centric Datacenter Architecture for Next-Generation AI Devices}{2024 -- Present}
+        {Institute of Information \& communications Technology Planning \& evaluation (IITP)}{}
+  \entry{Designing a PIM-Based NPU Architecture and FPGA Prototyping}{2024}
+        {Samsung Advanced Institute of Technology (SAIT)}{}
+\end{entries}
+
+\section{Teaching Experience}
+\begin{entries}[0pt]
+  \oneline{\textbf{Architecture of Computers} -- Teaching Assistant, Yonsei University}{Spring 2024}
+  \oneline{\textbf{Discrete Mathematics} -- Teaching Assistant, Yonsei University}{Fall 2024}
+\end{entries}
+
+\end{document}

@@ -1,0 +1,51 @@
+title: Sungchul Lee
+description: Sungchul Lee's academic portfolio
+url: https://Sungchul99.github.io
+baseurl: ""
+
+author:
+  name: Sungchul Lee
+  avatar: /images/sungchul_lee_profile.jpg
+  bio: "Graduate student, [HPCP Lab](https://yonsei-hpcp.github.io) @ [Yonsei University](https://www.yonsei.ac.kr)"
+  email: sungchul_lee@yonsei.ac.kr
+  linkedin: sungchul-lee-262241304
+
+# Sidebar menu. Anchors match the "## ..." headings in index.md (kramdown auto ids).
+nav:
+  - title: About
+    url: /#top
+  - title: Publications
+    url: /#publications
+  - title: Education
+    url: /#education
+  - title: Projects
+    url: /#projects
+  - title: Experiences
+    url: /#experiences
+  - title: CV
+    url: /cv/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - CLAUDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - cv/         # LaTeX source of files/cv.pdf (trailing slash: plain "cv" would also exclude cv.md)
+
+# Opt out of GitHub Pages' default theme (primer); this site has its own layout.
+theme: null

@@ -1,0 +1,261 @@
+:root {
+  --bg: #eeeeee;
+  --sidebar-bg: #e4e5e7;
+  --border: #d0d2d5;
+  --text: #222831;
+  --muted: #5b616a;
+  --accent: #0092ca;
+  --link: #0073a0;
+  --sidebar-width: 260px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ---------- Sidebar ---------- */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem 1.5rem 1.5rem;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+}
+
+.profile { text-align: center; }
+
+.avatar img {
+  display: block;
+  width: 128px;
+  height: 128px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+}
+
+.name {
+  display: block;
+  color: var(--text);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.name:hover { text-decoration: none; }
+
+.bio {
+  margin: .35rem 0 0;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+.bio a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); }
+.bio a:hover { color: var(--text); }
+
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  padding: .45rem .8rem;
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.nav a:hover,
+.nav a.active {
+  background: rgba(0, 0, 0, .06);
+  color: var(--text);
+  text-decoration: none;
+}
+.nav a.active { box-shadow: inset 3px 0 0 var(--accent); }
+
+/* Email / LinkedIn, right under the bio: a left-aligned list centered in the sidebar. */
+.contact {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .3rem;
+  margin: .9rem 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: .8rem;
+}
+.contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--muted);
+}
+.contact a:hover { color: var(--accent); text-decoration: none; }
+.contact svg { flex: none; width: 16px; height: 16px; }
+
+/* Visually hidden but still focusable, so the mobile menu works from the keyboard. */
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav-button { display: none; }
+
+/* ---------- Content ---------- */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 960px;
+  margin-left: var(--sidebar-width);
+  padding: 2.5rem 3rem 1.5rem;
+}
+.content article { flex: 1; }
+
+.page-title {
+  margin: 0 0 1.25rem;
+  font-size: 1.6rem;
+}
+
+h2 {
+  margin: 2.25rem 0 .9rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 1.3rem;
+  scroll-margin-top: 1.5rem;
+}
+
+article ul { padding-left: 1.3rem; }
+article li { margin: .3rem 0; }
+article li > ul { margin: .15rem 0; }
+/* Publication entries: one item per paper, a bit of air between them. */
+#publications + ul > li { margin-bottom: .9rem; }
+#publications + ul p { margin: 0; }
+
+sup { line-height: 0; }
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+/* ---------- CV page ---------- */
+
+.cv-actions { margin-bottom: 1rem; }
+
+.btn {
+  display: inline-block;
+  padding: .4rem .9rem;
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  font-size: .9rem;
+}
+.btn:hover { background: var(--link); color: #fff; text-decoration: none; }
+
+.cv-embed {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 12rem);
+  min-height: 600px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* ---------- Mobile: sidebar becomes a collapsible top bar ---------- */
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    padding: .9rem 1.1rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+    overflow: visible;
+  }
+
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    text-align: left;
+  }
+  .avatar img {
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    border-width: 2px;
+  }
+  .name { font-size: 1.1rem; }
+  .bio { margin-top: .1rem; font-size: .8rem; }
+
+  .nav-button {
+    display: flex;
+    margin-left: auto;
+    padding: .4rem;
+    border-radius: 6px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .nav-button svg { width: 24px; height: 24px; }
+  .nav-toggle:focus-visible ~ .sidebar .nav-button { outline: 2px solid var(--accent); }
+
+  .collapsible { display: none; }
+  .nav-toggle:checked ~ .sidebar .collapsible { display: flex; }
+  .nav-toggle:checked ~ .sidebar .nav-button { background: rgba(0, 0, 0, .06); }
+
+  .nav ul { margin-top: .75rem; }
+  .contact {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: .2rem .9rem;
+    margin-top: .3rem;
+  }
+  .desktop-only { display: none; }
+
+  .content {
+    min-height: 0;
+    margin-left: 0;
+    padding: 1.5rem 1.1rem 1.25rem;
+  }
+
+  .cv-embed { height: 75vh; min-height: 0; }
+}
