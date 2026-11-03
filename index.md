@@ -20,6 +20,10 @@ I am Sungchul Lee, a Ph.D. student in the Department of Computer Science at Yons
 **Sungchul Lee**, Suhyun Lee, Hanna Cha, Chaemin Lim, and Youngsok Kim  
 *2027 ACM International Conference on Management of Data (**SIGMOD**)*, June 2027 (to appear)  
 
+* **GISim: Representative-Warp-Free GPU Interval Simulation**  
+Hanna Cha, **Sungchul Lee**, and Youngsok Kim  
+*33rd IEEE International Symposium on High-Performance Computer Architecture (**HPCA**)*, Mar. 2027 (to appear)  
+
 * **[GCStack+GCScaler: Fast and Accurate GPU Performance Analyses Using Fine-Grained Stall Cycle Accounting and Interval Analysis](https://doi.org/10.1145/3695053.3731068)**  
 Hanna Cha, **Sungchul Lee**, Jounghoo Lee, Yeonan Ha, Joonsung Kim, and Youngsok Kim  
 *52nd IEEE/ACM International Symposium on Computer Architecture (**ISCA**)*, June 2025  
