@@ -29,10 +29,8 @@
 \titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{10pt}{6pt}
 
-% Entry lists: \begin{entries}[item spacing] \entry{..}{..}{..}{..} ... \end{entries}
 \newenvironment{entries}[1][4pt]{\begin{itemize}[leftmargin=0pt, label={}, itemsep=#1, topsep=0pt]}{\end{itemize}}
 
-% \entry{left, bold}{right}{second line left, italic}{second line right, italic}
 \newcommand{\entry}[4]{%
   \item
   \begin{tabular*}{\linewidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
@@ -40,13 +38,10 @@
     \textit{\small #3} & \textit{\small #4} \\
   \end{tabular*}}
 
-% \oneline{left}{right}: single-line entry
 \newcommand{\oneline}[2]{\item #1 \hfill #2}
 
-% Bullets under an entry
 \newenvironment{details}{\small\begin{itemize}[leftmargin=1.2em, label=\textbullet, itemsep=0pt, topsep=1pt]}{\end{itemize}}
 
-% Publications, newest first, labelled by hand: \item[{[4]}] ...
 \newenvironment{publist}
   {\begin{enumerate}[leftmargin=2.2em, labelsep=.6em, align=left, itemsep=5pt, topsep=0pt]}
   {\end{enumerate}}
@@ -99,9 +94,9 @@
 
 \section{Research Projects}
 \begin{entries}
-  \entry{DPU-Centric Datacenter Architecture for Next-Generation AI Devices}{2024 -- Present}
+  \entry{DPU-Centric Datacenter Architecture for Next-Generation AI Devices}{Mar. 2024 -- Present}
         {Institute of Information \& communications Technology Planning \& evaluation (IITP)}{}
-  \entry{Designing a PIM-Based NPU Architecture and FPGA Prototyping}{2024}
+  \entry{Designing a PIM-Based NPU Architecture and FPGA Prototyping}{Mar. 2023 -- Feb. 2024}
         {Samsung Advanced Institute of Technology (SAIT)}{}
 \end{entries}
 

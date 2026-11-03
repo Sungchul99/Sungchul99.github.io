@@ -37,19 +37,19 @@ Jinwoo Choi<sup>1</sup>, Yeonan Ha<sup>1</sup>, Hanna Cha, Seil Lee, **Sungchul 
 
 * **Yonsei University, Seoul, South Korea**
   * Ph.D. Student in Computer Science and Engineering
-  * Mar. 2024 ~ Present
+  * Mar. 2024 -- Present
 * **Yonsei University, Seoul, South Korea**
   * B.S. in Electrical and Electronic Engineering
-  * Mar. 2018 ~ Feb. 2024
+  * Mar. 2018 -- Feb. 2024
 
 
 ## Projects
 * DPU-Centric Datacenter Architecture for Next-Generation AI Devices
   * *Institute of Information & communications Technology Planning & evaluation (IITP)*
-  * 2024 ~ Present
+  * Mar. 2024 -- Present
 * Designing a PIM-Based NPU Architecture and FPGA Prototyping
   * *Samsung Advanced Institute of Technology (SAIT)*
-  * 2024
+  * Mar. 2023 -- Feb. 2024
 
 
 ## Experiences
